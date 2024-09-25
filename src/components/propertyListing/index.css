@@ -1,0 +1,23 @@
+.listing-card-container {
+  margin-bottom: 32px;
+  border: 1px solid black;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.listing-card-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.listing-card-container.expired {
+  opacity: 0.5;
+}
+
+.listing-card-container .expired-text-container {
+  color: red;
+}
+
+.listing-card-additional-container {
+  padding: 16px;
+}

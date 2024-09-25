@@ -1,0 +1,106 @@
+{
+  "properties": [
+    {
+      "id": "1",
+      "expired": true,
+      "listed": "2024-01-01T00:00:00Z",
+      "type": "flat",
+      "beds": 1,
+      "baths": 1,
+      "receptions": 1,
+      "price": 300000,
+      "location": "2a Test Lane, London, E2",
+      "vendor": "Test Vendor",
+      "images": [
+        {
+          "url": "https://placehold.co/600x400.png",
+          "position": 1
+        },
+        {
+          "url": "https://placehold.co/600x400/000000/FFFFFF.png",
+          "position": 2
+        }
+      ],
+      "amenities": [
+        {
+          "type": "station",
+          "name": "Madeup Place",
+          "distance": 0.1
+        },
+        {
+          "type": "underground",
+          "name": "Cotton Green",
+          "distance": 0.3
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "expired": false,
+      "listed": "2024-01-02T00:00:00Z",
+      "type": "house",
+      "beds": 2,
+      "baths": 1,
+      "receptions": 1,
+      "price": 450000,
+      "location": "4 Test Lane, London, E2",
+      "vendor": "Test Vendor",
+      "images": [
+        {
+          "url": "https://placehold.co/600x400.png",
+          "position": 1
+        },
+        {
+          "url": "https://placehold.co/600x400/000000/FFFFFF.png",
+          "position": 2
+        }
+      ],
+      "amenities": [
+        {
+          "type": "station",
+          "name": "Madeup Place",
+          "distance": 0.1
+        },
+        {
+          "type": "underground",
+          "name": "Cotton Green",
+          "distance": 0.3
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "expired": false,
+      "listed": "2024-01-03T00:00:00Z",
+      "type": "house",
+      "beds": 3,
+      "baths": 1,
+      "receptions": 1,
+      "price": 600000,
+      "location": "6 Test Lane, London, E2",
+      "vendor": "Test Vendor",
+      "images": [
+        {
+          "url": "https://placehold.co/600x400.png",
+          "position": 1
+        },
+        {
+          "url": "https://placehold.co/600x400/000000/FFFFFF.png",
+          "position": 2
+        }
+      ],
+      "amenities": [
+        {
+          "type": "station",
+          "name": "Madeup Place",
+          "distance": 0.1
+        },
+        {
+          "type": "underground",
+          "name": "Cotton Green",
+          "distance": 0.3
+        }
+      ]
+    }
+  ]
+}
