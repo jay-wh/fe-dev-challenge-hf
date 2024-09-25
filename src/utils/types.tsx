@@ -10,7 +10,7 @@ export type PropertyListing = {
   location: string;
   vendor: string;
   images: PropertyImage[];
-  features: PropertyAmenity[];
+  amenities: PropertyAmenity[];
 };
 
 export type PropertyImage = {
@@ -22,4 +22,9 @@ export type PropertyAmenity = {
   type: string;
   name: string;
   distance: number;
+};
+
+export type PropertyApiResponse = {
+  success: boolean;
+  data: PropertyListing[];
 };

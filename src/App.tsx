@@ -3,29 +3,27 @@ import { PropertyListingCard } from "./components/propertyListing";
 import { PropertyListing } from "./utils/types";
 import Error from "./components/Error";
 import { Grid, Typography } from "@mui/material";
+import { fetchProperties } from "./utils/helpers";
 
 const App = () => {
   const [properties, setProperties] = useState<PropertyListing[]>([]);
   const [errored, setErrored] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
 
+  const loadData = async () => {
+    const result = await fetchProperties();
+
+    if (result.success) {
+      setProperties(result.data);
+    } else {
+      setErrored(true);
+    }
+
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const loadProperties = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/properties");
-
-        if (!response.ok) setErrored(true);
-
-        const result = await response.json();
-
-        setLoading(false);
-        setProperties(result);
-      } catch {
-        setErrored(true);
-      }
-    };
-
-    loadProperties();
+    loadData();
   }, []);
 
   if (errored) {
@@ -45,6 +43,7 @@ const App = () => {
               <PropertyListingCard
                 key={`property-${property.id}`}
                 property={property}
+                onChange={loadData}
               />
             ))}
           </Grid>

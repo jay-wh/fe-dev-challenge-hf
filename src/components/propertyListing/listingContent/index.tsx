@@ -5,7 +5,12 @@ import { currency } from "../../../utils/helpers";
 
 export const ListingContent = ({ property }: { property: PropertyListing }) => {
   return (
-    <Grid container spacing={2} padding={"16px"}>
+    <Grid
+      container
+      spacing={2}
+      padding={"16px"}
+      data-testid="propertyListingContent"
+    >
       <Grid item xs={12}>
         <Typography variant="caption">Guide price</Typography>
 

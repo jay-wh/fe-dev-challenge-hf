@@ -6,8 +6,10 @@ import { Grid, Typography } from "@mui/material";
 
 export const PropertyListingCard = ({
   property,
+  onChange = null,
 }: {
   property: PropertyListing;
+  onChange?: Function | null;
 }) => {
   const handleClick = async () => {
     await window.fetch(`http://localhost:3000/properties/${property.id}`, {
@@ -20,12 +22,15 @@ export const PropertyListingCard = ({
         expired: true,
       }),
     });
+
+    if (onChange) await onChange();
   };
 
   return (
     <Grid
       container
       className={`listing-card-container ${property.expired ? "expired" : ""}`}
+      data-testid="propertyListing"
     >
       <Grid item xs={12} md={5}>
         <ListingImage image={property.images[0]} />
